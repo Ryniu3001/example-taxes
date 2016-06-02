@@ -21,7 +21,7 @@ public class UmowaPrace extends Umowa {
 	@Override
 	public String printType() {
 	 
-		return "Umowa o pracê";
+		return "Umowa o pracÄ™";
 	}
 
 }

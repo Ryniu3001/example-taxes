@@ -3,16 +3,15 @@ package com.bartoszwalter.students.taxes;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TaxCalculatorTest {
+public class TaxCalculatorAfterRefactorTest {
 
 	@Test
 	public void test(){
 		TaxCalculator calc = new TaxCalculator();
 		calc.umowa = 'P';
-		double podstawa = 5000;
-		calc.podstawa = podstawa;		
+		calc.podstawa = 5500;		
 		
-		Umowa umowaPraca = new UmowaPrace(podstawa);
+		Umowa umowaPraca = new UmowaPrace(5500);
 		umowaPraca.oblicz();
 		Assert.assertEquals(umowaPraca.getWynagrodzenie(), calc.main(null), 0);
 	}
